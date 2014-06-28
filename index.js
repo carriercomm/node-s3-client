@@ -788,6 +788,7 @@ function syncDir(self, params, directionIsToS3) {
   }
 
   function findAllS3Objects(cb) {
+    return cb();
     var finder = self.listObjects(listObjectsParams);
     finder.on('error', function(err) {
       cb(err);
